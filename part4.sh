@@ -15,7 +15,8 @@ while IFS= read -r site; do
   while IFS= read -r LDNS; do
     # get server name
     nslookup -debug -norecurse "$site" "$LDNS" > TTL.txt
-    java -cp out/production/Project3 Part4
+    #java -cp out/production/Project3 Part4
+    java Part4
   done < "$LDNSs"
   printf "\n" >> part4.csv
 done < "$sites"

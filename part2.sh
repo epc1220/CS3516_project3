@@ -13,6 +13,7 @@ while IFS= read -r line; do
     nslookup -type=MX "$line" > getMail.txt
 
     # run parser
-    java -cp out/production/Project3 Part2 "$line"
+    #java -cp out/production/Project3 Part2 "$line"
+    java Part2 "$line"
 
 done < "$file"

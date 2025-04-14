@@ -10,6 +10,7 @@ while IFS= read -r line; do
     # get RTT
     dig @"$line" www.wpi.edu +norecurse > LDNS_dig.txt
     # run parser
-    java -cp out/production/Project3 Part3 "$line"
+    #java -cp out/production/Project3 Part3 "$line"
+    java Part3 "$line"
 
 done < "$file"
