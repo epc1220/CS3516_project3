@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Part2 {
 
@@ -94,8 +96,46 @@ public class Part2 {
     }
 
 
+    /**
+     * input a list of domain names, and find which one was used the most
+     * @param file
+     */
+    public static void findMostUsedDomain(String file) {
+        try (BufferedReader FR = new BufferedReader(new FileReader(file))) {
+            String line;
+            HashMap<String, Integer> domains = new HashMap<>();
+            while ((line = FR.readLine()) != null) {
+                if (domains.isEmpty()) {
+                    domains.put(line, 1);
+                    continue;
+                }
+                boolean updated = false;
+                for (HashMap.Entry<String, Integer> entry : domains.entrySet()) {
+                    if (line.equals(entry.getKey())) {
+                        domains.replace(entry.getKey(),entry.getValue() + 1);
+                        updated = true;
+                        break;
+                    }
+                }
+                if (!updated)
+                    domains.put(line,1);
+            }
+            // find key associated with largest value in list
+            Map.Entry<String, Integer> maxEntry = null;
+            for (HashMap.Entry<String, Integer> entry : domains.entrySet())
+                if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+                    maxEntry = entry;
+            assert maxEntry != null;
+            System.out.println(maxEntry.getKey() + ", " + maxEntry.getValue());
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         Part2 dns = new Part2(args.length == 1 ? args[0] : "wpi.edu");
         dns.writeToTable();
+
+        findMostUsedDomain("domains.txt");
     }
 }
