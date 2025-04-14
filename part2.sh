@@ -1,23 +1,18 @@
-# list of website
-sites=("wpi.edu" "ucla.edu")
+# list of websites
+file="sites.txt"
 
-# go to out directory of java project
-#cd Parser/out/production/Parser
+printf "Domain\tADNS\t#ADNS\t\tWeb\t\t#Web\tMail\t#Mail\n" > part2.csv
 
 # run through all sites
-for str in "${sites[@]}";
-do
+while IFS= read -r line; do
     # get ADNS output
-    nslookup -type=NS "$str" > getADNS.txt
+    nslookup -type=NS "$line" > getADNS.txt
     # get web output
-    nslookup "www.$str" > getWeb.txt
+    nslookup "www.$line" > getWeb.txt
     # get mail output
-    nslookup -type=MX "$str" > getMail.txt
+    nslookup -type=MX "$line" > getMail.txt
 
     # run parser
-    #java "Part2" $str
+    java -cp out/production/Project3 Part2 "$line"
 
-    #rm Parser/getADNS.txt
-    #rm Parser/getWeb.txt
-    #rm Parser/getMail.txt
-done
+done < "$file"
