@@ -1,0 +1,91 @@
+Checking LDNSs:
+Server:		170.64.147.31
+Address:	170.64.147.31#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		116.80.58.204
+Address:	116.80.58.204#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		196.203.86.4
+Address:	196.203.86.4#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+;; communications error to 109.106.238.225#53: timed out
+Server:		109.106.238.225
+Address:	109.106.238.225#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+;; communications error to 109.106.238.225#53: timed out
+
+Server:		222.122.43.43
+Address:	222.122.43.43#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		203.126.118.38
+Address:	203.126.118.38#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		8.8.4.4
+Address:	8.8.4.4#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		54.187.61.200
+Address:	54.187.61.200#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		169.55.51.86
+Address:	169.55.51.86#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		173.162.106.221
+Address:	173.162.106.221#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
+Server:		108.49.223.152
+Address:	108.49.223.152#53
+
+Non-authoritative answer:
+www.wpi.edu	canonical name = wpiedu.prod.acquia-sites.com.
+Name:	wpiedu.prod.acquia-sites.com
+Address: 184.73.245.212
+
